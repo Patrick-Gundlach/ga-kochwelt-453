@@ -58,6 +58,11 @@
         font-size: 13px;
     }
 
+    form {
+        
+        min-width: 250px !important;
+    }
+
     footer {
         width: 100%;
         max-height: unset !important;
@@ -83,6 +88,14 @@
         flex-direction: unset;
         padding: 15px;
         width: unset !important;
+    }
+    .tanksSiteText{
+        padding: 0 10px;
+        text-align: center;
+    }
+    .tanksSiteTextTeam{
+        padding: 0 10px;
+        text-align: right;
     }
 }
 
@@ -147,5 +160,8 @@
     .mobilProfile{
         display: flex;
 
+    }
+    .tanksContent h1{
+        font-size: 1.5rem;
     }
 }

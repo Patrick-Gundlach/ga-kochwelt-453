@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('./fonts.css');
 @import url('./mobil.css');
 
 :root {
@@ -129,6 +129,7 @@ nav a {
     padding: 3px 6px;
     font-weight: 700;
     border-bottom: 3px solid white;
+    transition: border-bottom 0.6s  ease-in-out;
 }
 
 nav a:hover {
@@ -403,4 +404,12 @@ footer {
 }
 .mobileLine{
 display: flex;
+}
+.tanksSiteTextTeam{
+    padding: 0 10px;
+    font-weight: 700;
+    text-align: right;
+}
+.tanksContentText h1{
+    text-align: center;
 }
