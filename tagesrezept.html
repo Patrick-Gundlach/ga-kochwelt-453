@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="script.js"></script>
+    <title>Rezept des Tages Sushi</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="includeHTML()">
+
+    <div w3-include-html="./templates/header.html"></div>
+    <div class="contentBodyMain">
+        <div class="contentBodyInner">
+            <h1>Rezept des Tages Sushi</h1>
+            <img class="headerImageDay" src="./img/img-gerichte/sushi-tag/kochwelt_sushi_2.jpg" />
+            <div class="display-flex">
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>45 Min.</div>
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/brain-solid.svg" />
+                    </svg>pfiffig</div>
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/calendar-alt-regular.svg" />
+                    </svg>11.12.2018</div>
+            </div>
+            <hr />
+            <div class="ingredientInput">
+                <p>Zutaten für</p><div class="mobileLine">
+                    <input id="portionsAmount" 
+                    class="inputFieldPortion" 
+                    type="number" 
+                    value="4" 
+                    min="1" 
+                    max="99"
+                    onkeydown="return restrictInput(event)"
+                    onblur="replaceZeroWithOne()">
+                    <button onclick="calculatorIngredients()">Potionen</button></div>
+            </div>
+            <div id="ingredientList" class="ingredientLists"></div>
+            <h2>Zubereitung</h2>
+            <div class="display-flex">
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>Arbeitszeit ca.45 Minuten</div>
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>Gesamtzeit ca. 45 Minuten</div>
+            </div>
+            <p>Die Kochanleitung für den Sushi-Reis finden Sie "hier!"
+
+                Bevor es losgeht, die Sushi-Matte mit Klarsichtfolie einwickeln, so bleibt die Matte sauber und der Reis
+                kann sich nicht in den Zwischenräumen der dünnen Bambusstangen verkleben.
+
+            <p>Maki mit Lachs
+                Ein Noriblatt nehmen und mit einem Messer halbieren. Das Blatt mit der rauen Seite nach oben auf die
+                Bambusmatte legen, so bleibt der Reis besser daran haften. Nun die Finger in einer Schale mit Wasser
+                leicht befeuchten und eine Menge abgekühlten Reis auf dem Noriblatt so verteilen, dass das Algenblatt
+                mit Reis bedeckt ist, nur unten sollte ein freier Rand bleiben, damit man später die Rolle kleben kann.
+                Nun den Lachs in Stiftform schneiden und der Länge nach auf den Reis legen. Den Lachs mit Wasabi
+                bestreichen, aber nur dünn, denn Wasabi ist recht scharf. Dann den unbedeckten Rand des Noriblattes
+                anfeuchten, und von der anderen Seite beginnend die Bambusmatte einschlagen, sodass eine Rolle entsteht.
+                Drückt man die eingerollte Bambusmatte von oben und den Seiten an, erhält man eine viereckige Form.</p>
+            <p>Maki mit Lachs
+                Ein Noriblatt nehmen und mit einem Messer halbieren. Das Blatt mit der rauen Seite nach oben auf die
+                Bambusmatte legen, so bleibt der Reis besser daran haften. Nun die Finger in einer Schale mit Wasser
+                leicht befeuchten und eine Menge abgekühlten Reis auf dem Noriblatt so verteilen, dass das Algenblatt
+                mit Reis bedeckt ist, nur unten sollte ein freier Rand bleiben, damit man später die Rolle kleben kann.
+                Nun den Lachs in Stiftform schneiden und der Länge nach auf den Reis legen. Den Lachs mit Wasabi
+                bestreichen, aber nur dünn, denn Wasabi ist recht scharf. Dann den unbedeckten Rand des Noriblattes
+                anfeuchten, und von der anderen Seite beginnend die Bambusmatte einschlagen, sodass eine Rolle entsteht.
+                Drückt man die eingerollte Bambusmatte von oben und den Seiten an, erhält man eine viereckige Form.</p>
+            <p>California Roll oder Inside-Out
+                Ein halbes Algenblatt nehmen, auf den vorderen Bereich der Matte legen und die raue Seite komplett mit
+                Reis bedecken, Sesam auf den Reis streuen. Die freie Seite der Bambusmatte nehmen, über das Algenblatt
+                mit dem Reis schlagen, andrücken und umdrehen, so haben wir nun die andere Seite des Algenblattes vor
+                uns liegen, der Reis ist unten. Ein wenig Mayonnaise längs auf dem Algenblatt verteilen, Surimi
+                ebenfalls längs auf die Mayo geben, Gurke und Avocado in Stifte schneiden und dazu geben. Mit etwas
+                Wasabi bestreichen und zum Schluss ein wenig Lollo Rosso obenauf legen. Nun das Ganze mit Hilfe der
+                Bambusmatte einrollen.</p>
+            <p>Nigiris mit Thunfisch und Garnelen
+                Dafür den Thunfisch in mundgerechte dünne Scheiben schneiden, Garnelen von ihrem Panzer befreien. Beides
+                mit etwas Wasabi einstreichen. Die Hände befeuchten, etwas Reis nehmen und diesen erst oval im
+                Handrücken rollen und dann zu einer Kastenform drücken. Den Fisch auf dem Reis platzieren.
+                Die Anzahl der Nigiris im Verhältnis zu den Makis hängt ganz von Ihren Präferenzen ab, mögen Sie lieber
+                Makis, machen Sie einfach mehr Sushirollen. Hier kann eine Rolle selbstverständlich auch komplett
+                vegetarisch werden, z.B. mit nur Avocado oder Shiitake Pilzen oder nach eigenem Gusto auch bunt variiert
+                mit Gemüse und Fisch. Natürlich können Sie auch andere Meeresbewohner für die Nigiris verwenden, z.B.
+                Lachs, Oktopus, Makrele, Jacobsmuschel etc. Bedenken Sie nur vorab beim Einkauf, die Menge der
+                Meereszutaten Ihren Wünschen anzupassen. Und achten Sie darauf immer frischen Fisch zu kaufen, am besten
+                sagen Sie dazu, dass Sie Sushi machen wollen.</p>
+            <p>Zum Anrichten die Rollen nun in ca. 6 bis 8 Stücke schneiden, dafür ein scharfes Messer nehmen und vor
+                jedem Schnitt leicht befeuchten, so hat man saubere Schnitte und keinen Reis überall an den Rändern der
+                Rolle kleben. Die Stücke mit den Nigiris auf einem Teller anrichten. Den eingelegten Ingwer und die
+                Sojasauce in separaten Schalen dazu reichen. Sowohl Nigiris als auch Makis können in die Sojasauce
+                getunkt werden, das gibt nochmal zusätzlichen Geschmack, ebenso kann die Wasabipaste nochmals extra dazu
+                gereicht werden. Der Ingwer dient zur Geschmacksneutralisation zwischen zwei verschiedenen
+                Sushihäppchen, manch einer isst ihn aber auch einfach dazu.</p>
+            <p>Viel Spaß beim „Rollen“ und guten Appetit!</p>
+            <h3>Rezept erstellt von</h3>
+            <div class="display-flex  align-items-center mobilProfile">
+                <img class="profilImage" src="./img/profil/Patrick-gundlach.jpg">
+            <div class="profilName">Patrick Gundlach</div>
+            </div>
+            
+        </div>
+    </div>
+    <div w3-include-html="./templates/footer.html"></div>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "navistyle.js";
+            document.body.appendChild(element);
+        }
+        // greater than or equal IE 9 and other modern Browser
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        //  less than or equal IE 8
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        // all Browser
+        else window.onload = downloadJSAtOnload;
+    </script>
+    <script src="./Scripts/scriptSushi.js"></script>
+    <script src="./Scripts/table+calculator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="script.js"></script>
+    <title>Impressum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="includeHTML()">
+
+    <div w3-include-html="templates/header.html"></div>
+    <div class="contentBodyMain">
+        <div class="contentBox">
+
+            <h1>Impressum</h1>
+
+            <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+            <p>Patrick Gundlach<br />
+                Trompeterallee 16<br />
+                41189 M&ouml;nchengladbach</p>
+
+            <h2>Kontakt</h2>
+            <p>Telefon: <a href="tel:+4917658041380">+4917658041380</a><br />
+                E-Mail: <a href="mailto:pg@patrick-gundlach.de">pg@patrick-gundlach.de</a></p>
+
+            <h2>credits</h2>
+            <p>Created my free logo at <a href="https://logomakr.com" target="_blank">LogoMakr.com</a>
+
+
+
+                The icons are provided by <a href="https://fontawesome.com/" rel="nofollow"
+                    target="_blank">FontAwesome</a>
+                unter the <a href="https://fontawesome.com/license" target="_blank" rel="nofollow">Creative Commons
+                    Attribution 4.0 International license</a>.</p>
+        </div>
+    </div>
+    <div w3-include-html="templates/footer.html"></div>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "navistyle.js";
+            document.body.appendChild(element);
+        }
+        // greater than or equal IE 9 and other modern Browser
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        //  less than or equal IE 8
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        // all Browser
+        else window.onload = downloadJSAtOnload; 
+    </script>
+</body>
+
+</html>

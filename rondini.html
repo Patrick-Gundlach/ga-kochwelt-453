@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="./img/favicon.png" />
+		<script src="script.js"></script>
+		<title>Rezept Rondini</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+
+	<body onload="includeHTML()">
+		<div w3-include-html="./templates/header.html"></div>
+		<div class="contentBodyMain">
+			<div class="contentBodyInner">
+				<h1>Rezept Rondini</h1>
+				<img
+					class="headerImage"
+					src="./img/img-gerichte/Rondini-img/Gefüllte-Rondini.jpg"
+				/>
+				<div class="display-flex">
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>55 Min.
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/brain-solid.svg" />
+							</svg>pfiffig
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/calendar-alt-regular.svg" />
+							</svg>11.12.2018
+					</div>
+				</div>
+				<hr />
+				<div class="ingredientInput">
+					<p>Zutaten für</p>
+					<div class="mobileLine">
+						<input
+							id="portionsAmount"
+							class="inputFieldPortion"
+							type="number"
+							value="4"
+							min="1"
+							max="99"
+							onkeydown="return restrictInput(event)"
+							onblur="replaceZeroWithOne()">
+						<button onclick="calculatorIngredients()">Potionen</button>
+					</div>
+				</div>
+				<div id="ingredientList" class="ingredientLists"></div>
+				<h2>Zubereitung</h2>
+				<div class="display-flex">
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>Arbeitszeit ca. Minuten
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>Garzeit ca. 40 Minuten
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>Gesamtzeit ca. 55 Minuten
+					</div>
+				</div>
+				<p><b>Ofen vorheizen auf 180Grad.</b></p>
+				<p>
+					Die Rondini und Paprika waschen. Rondini unter dem Strunk schneiden
+					und den Inhalt rauslöffeln. Paprika, Rondiniinhalt und Zwiebel separat
+					kleinschneiden in Würfeloptik. Veganes Hackfleisch mit neutrales Öl in
+					der Pfanne bei mittelstarker Hitze anbraten und die Zwiebel
+					hinzufügen. Nachdem die Zwiebel goldbraun angebraten sind kommt die
+					Paprika mit dem Rondiniinhalt dazu. Anschliessend die Knoblauchzehe in
+					die Pfanne mit einer Knoblauchpresse pressen Salz, Pfeffer und
+					Paprikapulver hinzufügen.
+				</p>
+				<p>
+					Alles gut verrühren und die Pfanne von der Hitze abklingen lassen. Die
+					Rondinis auf ein Blech verteilen und mit der Füllung befüllen. Den
+					abgeschnitten Strunk auf die Rondinis setzen und im Ofen für 40min
+					Garen lassen.
+				</p>
+				<h3>Rezept erstellt von</h3>
+				<div class="display-flex align-items-center mobilProfile">
+					<img class="profilImage" src="./img/profil/Canfer.jpeg" />
+					<div class="profilName">Canfer Kececi</div>
+				</div>
+			</div>
+		</div>
+		<div w3-include-html="./templates/footer.html"></div>
+		<script type="text/javascript">
+			function downloadJSAtOnload() {
+				var element = document.createElement("script");
+				element.src = "navistyle.js";
+				document.body.appendChild(element);
+			}
+			// greater than or equal IE 9 and other modern Browser
+			if (window.addEventListener)
+				window.addEventListener("load", downloadJSAtOnload, false);
+			//  less than or equal IE 8
+			else if (window.attachEvent)
+				window.attachEvent("onload", downloadJSAtOnload);
+			// all Browser
+			else window.onload = downloadJSAtOnload;
+		</script>
+		<script src="./Scripts/scriptRondini.js"></script>
+		<script src="./Scripts/table+calculator.js"></script>
+	</body>
+</html>

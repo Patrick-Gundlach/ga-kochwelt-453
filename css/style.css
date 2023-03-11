@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('./mobil.css');
+
+:root {
+    --mainWidth: 90%;
+    --innerWidth: 80%;
+    --svgImageWidth: 15px;
+    --svgImageHeight: 15px;
+    --rezeptBackColor: #d4d4d4;
+    --buttonBackColor:  rgb(25, 124, 0);
+    --buttonFontColor: #ffffff;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(114, 114, 114);
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/kochwelt_bg_0.jpg);
+    background-size: cover;
+    opacity: 0.8;
+    filter: blur(5px);
+}
+
+
+hr {
+    border: 1px solid var(--rezeptBackColor);
+    width: 100%;
+}
+
+.clock{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: var(--rezeptBackColor);
+    margin: 10px 15px 10px 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.clock svg{
+    width: var(--svgImageWidth);
+    height: var(--svgImageHeight);
+    padding-right: 10px;
+}
+.clock image{
+    width: var(--svgImageWidth);
+    height: var(--svgImageHeight);
+}
+
+.contentBox {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentBodyHeader {
+    display: flex;
+    justify-content: space-between;
+    width: var(--mainWidth);
+    position: relative;
+    z-index: 1;
+    padding: 10px 0 0 0;
+}
+
+.contentBodyFooter {
+    display: flex;
+    justify-content: space-between;
+    width: var(--mainWidth);
+    position: relative;
+    z-index: 1;
+}
+
+.contentBodyMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    margin: auto;
+    width: var(--mainWidth);
+    min-height: calc(100% - 287px);
+    position: relative;
+
+}
+
+/* - Header - */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    max-height: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.header img {
+    object-fit: cover;
+    width: 180px;
+}
+
+/* - Navigation - */
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 3px 6px;
+    font-weight: 700;
+    border-bottom: 3px solid white;
+}
+
+nav a:hover {
+    color: rgb(25, 124, 0);
+    border-bottom: 3px solid rgb(25, 124, 0);
+}
+
+nav a.active {
+    color: rgb(25, 124, 0);
+    border-bottom: 3px solid rgb(25, 124, 0);
+}
+.display-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+/* - Home Content - */
+.homeRecipeDay {
+    display: flex;
+    max-width: var(--innerWidth);
+    margin: auto;
+    padding: 50px 0;
+}
+
+.homeRecipeDay img {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px #a3a3a3;
+}
+
+.homeTextBox {
+    padding: 0 0 0 15px;
+}
+
+.homeTextBox h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.homeRecipeDay button {
+
+    background-color: var(--buttonBackColor);
+    color: var(--buttonFontColor);
+    border: none;
+    padding: 10px 42px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+.homeMiddelLine {
+    background-color: #cbcbcb;
+    width: 100%;
+    padding: 35px 0;
+}
+
+.homeMiddel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: var(--innerWidth);
+    margin: auto;
+}
+
+.homeMiddel h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.homeMiddelBox {
+    text-align: center;
+}
+
+.homeMiddelBox img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.homeMiddelBox a {
+    text-decoration: none;
+    color: #000;
+}
+
+.homeLast {
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--innerWidth);
+    margin: auto;
+}
+
+.homeLast h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.homeContentBoxLast p {
+    padding: 0 15px 0 0;
+}
+
+.homeLast img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+
+}
+
+.homeContentBoxLast {
+    display: flex;
+    padding: 0 0 50px 0;
+}
+
+/* - Kontakt Form - */
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+}
+
+form button {
+    width: 100px;
+    background-color: rgb(25, 124, 0);
+    color: white;
+    border: none;
+    padding: 12px 6px;
+    border-radius: 5px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+.contactContent {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+/* - Footer -*/
+footer {
+    width: 100%;
+    max-height: 250px;
+    background-color: #a3a3a3;
+    padding: 15px 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footerLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.footerLogo img {
+    object-fit: cover;
+    max-width: 60px;
+    padding-bottom: 5px;
+}
+
+.footerContent {
+    padding: 0 15px;
+}
+
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 18%;
+}
+
+.footerNav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.footerNav a:hover {
+    color: rgb(25, 124, 0);
+    font-weight: 700;
+}
+
+/* Tabelle */
+.contentBodyInner {
+    max-width: var(--innerWidth);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.headerImage{
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: 20% 38%;
+}
+.headerImageDay{
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: 20% 80%;
+}
+
+.ingredientLists {
+    display: flex;
+}
+
+.ingredientLists tbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredientLists tr {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.ingredientLists tr:nth-child(odd) {
+    background-color: var(--rezeptBackColor);
+    border-radius: 5px;
+}
+
+.ingredientLists td {
+    min-width: 70px;
+    padding: 10px 10px 10px 0;
+}
+
+.ingredientAmounts {
+    text-align: right;
+    padding: 0 3px 0 0 !important;
+}
+.ingredientInput{
+    display: flex;
+    align-items: center;
+}
+.ingredientInput p{
+    padding-right: 10px;
+}
+.ingredientInput button{
+    background-color: var(--buttonBackColor);
+    color: var(--buttonFontColor);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    cursor: pointer;
+}
+.inputFieldPortion{
+    border: 1px solid var(--rezeptBackColor);
+    font-size: 16px;
+    border-radius: 10px 0 0 10px;
+    padding: 10px 20px;
+}
+
+.profilImage{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profilName{
+    font-size: 22px;
+    padding-left: 15px;
+}
+.mobileLine{
+display: flex;
+}

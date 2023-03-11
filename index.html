@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="script.js"></script>
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="includeHTML()">
+
+    <div w3-include-html="templates/header.html"></div>
+    <div class="contentBodyMain">
+        <div class="homeRecipeDay">
+            <img src="./img/img-gerichte/sushi-tag/kochwelt_sushi_1.jpg">
+            <div class="homeTextBox">
+                <h2>Lecker Sushi Selber machen</h2>
+                <p>Sushi ist ein beliebtes japanisches Gericht, das aus Reis und verschiedenen Füllungen besteht. Man
+                    kann es auch zu Hause selber machen, was nicht nur günstiger, sondern auch eine unterhaltsame
+                    Aktivität mit Familie und Freunden sein kann. Mit diesem Leitfaden zeigen wir Ihnen, wie Sie Ihre
+                    eigenen Sushi-Rollen herstellen können und welche Zutaten und Werkzeuge Sie dafür benötigen. Mit ein
+                    paar einfachen Schritten können Sie ein köstliches, selbstgemachtes Sushi-Erlebnis genießen.</p>
+                <button onclick="window.location.href = 'tagesrezept.html';">Rezept öffnen</button>
+            </div>
+        </div>
+        <div class="homeMiddelLine">
+            <div class="homeMiddel">
+                <h2>Lust auf was Neues?</h2>
+                <div class="homeMiddelBox">
+                    <a href="rondini.html">
+                        <img src="./img/img-gerichte/Rondini-img/Gefüllte-Rondini.jpg">
+                        <p>Rondini</p>
+                    </a>
+                </div>
+                <div class="homeMiddelBox">
+                    <a href="ramen.html">
+                        <img src="./img/img-gerichte/Ramen/table-restaurant-asian-bowl-dish-meal-1407283-pxhere.com.jpg">
+                        <p>Ramen</p>
+                    </a>
+                </div>
+                <div class="homeMiddelBox">
+                    <a href="ente.html">
+                        <img src="./img/img-gerichte/Ente/ente_0.jpg">
+                        <p>Ente Süß sauer</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="homeLast">
+            <h2>Warum ist asiatische Küche so gesund?</h2>
+            <div class="homeContentBoxLast">
+                <p>Asiatische Küche verwendet frische Zutaten wie Gemüse, Fisch, Sojabohnen und Gewürze und wird
+                    schonend zubereitet, was den Erhalt von Nährstoffen begünstigt und die Fettzufuhr reduziert. Auch
+                    kleinere Portionen sind typisch. Das basale Element besteht oft aus Reis oder Nudeln, anstelle von
+                    Brot oder Kartoffeln. All das trägt zu der gesunden Wirkung asiatischen Essens bei.</p>
+                <img src="./img/img-gerichte/Ramen/table-restaurant-asian-bowl-dish-meal-1407283-pxhere.com.jpg">
+            </div>
+        </div>
+
+    </div>
+    <div w3-include-html="templates/footer.html"></div>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "navistyle.js";
+            document.body.appendChild(element);
+        }
+        // greater than or equal IE 9 and other modern Browser
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        //  less than or equal IE 8
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        // all Browser
+        else window.onload = downloadJSAtOnload; 
+    </script>
+</body>
+
+</html>

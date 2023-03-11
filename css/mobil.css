@@ -1,0 +1,151 @@
+@media (max-width: 960px) {
+    .homeRecipeDay {
+        flex-direction: column;
+    }
+
+    .homeRecipeDay img {
+        height: unset;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 5px 5px #a3a3a3;
+    }
+
+    .homeTextBox {
+        padding: 15px 0 0 15px !important;
+        width: 100%;
+    }
+
+    .homeMiddel {
+        justify-content: center !important;
+    }
+
+    .homeMiddelBox {
+        padding: 0 25px;
+    }
+
+    .homeContentBoxLast {
+        flex-direction: column-reverse;
+        padding: unset !important;
+    }
+
+    .homeLast img {
+        width: 100% !important;
+        height: unset !important;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 625px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: #fff;
+        width: 100%;
+        max-height: unset !important;
+        position: relative;
+        z-index: 2;
+    }
+
+    .contentBodyHeader {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-weight: 400 !important;
+        font-size: 13px;
+    }
+
+    footer {
+        width: 100%;
+        max-height: unset !important;
+        background-color: #a3a3a3;
+        padding: 15px 0;
+        position: relative;
+        z-index: 2;
+        display: unset;
+        justify-content: unset;
+    }
+
+    .contentBodyFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: var(--mainWidth);
+        position: relative;
+        z-index: 1;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: unset;
+        padding: 15px;
+        width: unset !important;
+    }
+}
+
+@media (max-width: 619px) {
+    :root {
+        --mainWidth: 100%;
+        --innerWidth: 90%;
+        --svgImageWidth: 10px;
+        --svgImageHeight: 10px;
+        --rezeptBackColor: #d4d4d4;
+        --buttonBackColor: rgb(25, 124, 0);
+        --buttonFontColor: #ffffff;
+    }
+
+    .clock {
+        font-size: 12px !important;
+        margin: 5px 3px 5px 0 !important;
+        padding: 5px;
+        border-radius: 8px !important;
+    }
+
+    .clock svg {
+        width: var(--svgImageWidth) !important;
+        height: var(--svgImageHeight) !important;
+        padding-right: 10px;
+    }
+
+    .clock image {
+        width: var(--svgImageWidth) !important;
+        height: var(--svgImageHeight) !important;
+    }
+    .ingredientInput {
+        flex-direction: column !important;
+    }
+    .ingredientInput p {
+    padding-right: unset !important;
+    width: 100%;
+    }
+    .mobileLine{
+        display: flex;
+        max-width: 100%;
+    }
+    .inputFieldPortion {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .ingredientInput button {
+        margin-bottom: 10px;
+    }
+    .ingredientLists td {
+        min-width: 60px;
+        font-size: 14px;
+        padding: 10px 10px 10px 0;
+    }
+    .display-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    h3{
+        margin: auto;
+    }
+    .mobilProfile{
+        display: flex;
+
+    }
+}

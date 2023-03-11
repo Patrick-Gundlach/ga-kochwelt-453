@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="./img/favicon.png" />
+		<script src="script.js"></script>
+		<title>Rezept Ramen</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+
+	<body onload="includeHTML()">
+		<div w3-include-html="./templates/header.html"></div>
+		<div class="contentBodyMain">
+			<div class="contentBodyInner">
+				<h1>Rezept Ramen</h1>
+				<img
+					class="headerImage"
+					src="./img/img-gerichte/Ramen/restaurant-dish-meal-food-fish-cuisine-1384941-pxhere.com.jpg"
+				/>
+				<div class="display-flex">
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" /></svg>45 Min.
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/brain-solid.svg" /></svg>pfiffig
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/calendar-alt-regular.svg" />
+							</svg>08.12.2010
+					</div>
+				</div>
+				<hr />
+				<div class="ingredientInput">
+					<p>Zutaten für</p>
+					<div class="mobileLine">
+						<input
+							id="portionsAmount"
+							class="inputFieldPortion"
+							type="number"
+							value="4"
+							min="1"
+							max="99"
+							onkeydown="return restrictInput(event)"
+							onblur="replaceZeroWithOne()">
+					<button onclick="calculatorIngredients()">Potionen</button>
+					</div>
+				</div>
+				<div id="ingredientList" class="ingredientLists"></div>
+				<h2>Zubereitung</h2>
+				<div class="display-flex">
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>Arbeitszeit ca.45 Minuten
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>Koch-/Backzeit ca. 5 Stdunden
+					</div>
+					<div class="clock">
+						<svg>
+							<image xlink:href="./img/icons/clock-regular.svg" />
+							</svg>Gesamtzeit ca. 45 Minuten
+					</div>
+				</div>
+				<p>
+					Die Brühe:<br />Das Suppenhuhn mit Lauch, Zwiebel, drei bis vier Zehen
+					Knoblauch, Ingwerwurzel, einer Prise Salz, drei bis vier Karotten und
+					den Algen (optional) im kalten Wasser ansetzen. So viel Wasser
+					hinzufügen, dass das Huhn komplett bedeckt ist. Die Topfgröße so
+					wählen, dass alles plus zwei bis drei Liter Wasser gut hineinpasst,
+					ein fünf Liter Topf ist ideal.
+				</p>
+				<p>
+					Alles langsam zum Köcheln bringen und mindestens 3 - 4 Stunden köcheln
+					lassen. Noch leckerer wird die Brühe bei Kochzeiten von 6 - 8 Stunden.
+					Sollte Schaum entstehen, kann man diesen abschöpfen, muss man aber
+					nicht. Die Brühe sollte nicht zu stark kochen, nur leicht simmern. Je
+					länger diese Brühe kocht, desto besser. Die Brühe anschließend
+					abseihen.
+				</p>
+				<p>
+					Es lohnt sich, ein gutes und vor allem echtes Suppenhuhn oder ein
+					frisches Hähnchen zu verwenden. Wenn man ein Hähnchen nimmt, kann man
+					nach ca. 1 Stunde Kochzeit das Fleisch komplett von den Knochen lösen
+					und alles bis auf das Fleisch (Knochen, Knorpel, Haut) weiter in der
+					Brühe köcheln lassen. Aus dem Fleisch lassen sich viele andere
+					Gerichte zubereiten (z.B. thailändischer Hühnersalat u.v.m).
+				</p>
+				<p>
+					Das Fleisch:<br />
+					Das Schweinefilet in einer Pfanne kurz von allen Seiten scharf
+					anbraten, bis es leicht bräunlich ist. Nicht zu lange braten, nur
+					leicht bräunen! Anschließend in einen Topf legen und mit Sojasauce
+					(ich verwende Kikkoman weil sie natürlich gebraut ist) und 50 bis 100
+					ml Reiswein oder Sake (ich verwende chinesischen Reiswein) aufgießen.
+					Den Zucker, in Scheiben geschnittene Frühlingszwiebel (mit dem Grün
+					und nur wenig von der Zwiebel) und geriebene Ingwerwurzel dazugeben.
+					Mit etwas Wasser aufgießen, sodass das Filet fast ganz mit Flüssigkeit
+					bedeckt ist. Die Flüssigkeit zum Köcheln bringen. Auch hier wieder nur
+					leicht köcheln lassen.
+				</p>
+				<p>
+					Nach 40 Minuten das Filet aus der Flüssigkeit nehmen und zur Seite
+					legen. Das Schweinefilet, bevor es in die Suppe kommt, in ca. 2 - 3 mm
+					dicke Scheiben schneiden.
+				</p>
+				<p>
+					Das Fleisch sollte von einem guten Metzger stammen, es gibt da
+					erstaunliche Qualitätsunterschiede. Ein gutes Schweinefilet ist nach
+					dieser Prozedur sehr zart und saftig und nicht zäh und trocken.
+				</p>
+				<p>
+					Die Eier:<br />
+					Die Eier hart kochen und pellen. Anschließend in den Sud geben und 10
+					Minuten mitköcheln lassen. Immer wieder wenden, sodass sie gleichmäßig
+					vom Sud gebräunt werden. Wenn sie fertig sind, halbieren und zur Seite
+					legen.
+				</p>
+				<p>
+					Die Nudeln:<br />
+					Man kann, während die Brühen kochen, selbst Nudeln herstellen (Rezepte
+					dafür gibt es in der Datenbank) oder chinesische Suppennudeln vom
+					Asiashop verwenden. Ich habe gute Erfahrungen mit Quick-Noodles
+					gemacht, aber es schmecken sogar Spaghetti darin sehr gut. Wer einen
+					gut sortierten Asialaden hat, bekommt vielleicht sogar Ramen Nudeln
+					oder frische Ramen Nudeln. Die Nudeln aber immer streng nach Anleitung
+					kochen und eher zu hart als zu weich.
+				</p>
+				<p>
+					Die Suppe:<br />
+					Wenn die Hühnerbrühe fertig ist, diese mit der Brühe vom Fleisch in
+					einen Topf geben und mit einigen Esslöffeln Sojasauce und noch mal
+					einem kleinen Schuss Reiswein oder Sake abschmecken. Eventuell noch
+					nachsalzen, aber eigentlich müsste die Sojasauce genügend Salz
+					liefern. Alles noch mal aufkochen lassen. Man kann auch noch Wasser
+					dazugeben, je nachdem wie stark bzw. verdünnt man die Suppe haben
+					will. Ich lasse die Brühe pur ohne Zugabe von Wasser. Wenn die Suppe
+					kocht, sollten für den nächsten Schritt alle anderen Zutaten schon
+					fertig sein, vor allem auch die Nudeln.
+				</p>
+				<p>
+					Die Garnierung:<br />
+					Die frischen Sojasprossen mit heißem Wasser in einem Sieb überbrühen.
+					Das Grün von zwei Frühlingszwiebeln in Ringe schneiden. Aus dem
+					Noriblatt kleine Streifen (ca. 2 x 3 cm) schneiden.
+				</p>
+				<p>
+					Das Finish:<br />
+					Die Suppe in eine Schale füllen und so viele Nudeln hinzugeben, dass
+					die Nudeln bis knapp unter die Oberfläche reichen.
+				</p>
+				<p>
+					Zwei bis drei Scheiben Schweinefilet darauf legen. Das Fleisch kann
+					man noch mit grobem Pfeffer bestreuen. Ein halbes Ei mit dem Eigelb
+					nach oben an den Rand der Schale legen. Eine kleine Handvoll Sprossen
+					und Frühlingszwiebeln darüber streuen und die Noriblattstreifen
+					darüber geben. Den Anblick der Suppe genießen. Am besten mit Stäbchen
+					essen und die Brühe laut schlürfen, dann schmeckt es am besten. Das
+					Rezept wurde inspiriert von einem Rezept von Harumi Kurihara. Für
+					weitere Inspiration empfehle ich den Film Tampopo.
+				</p>
+				<p>
+					Teilrezept:<br />
+					Das gekochte Schweinefilet kann man auch auf eine Schale Reis legen
+					und mit dem Sud übergießen. Auch sehr lecker als Alternativgericht.
+				</p>
+				<p>
+					Die Suppe ist nicht aufwendig, aber sie braucht viel Zeit, weil alle
+					Zutaten lange gekocht werden müssen, um den einzigartigen Geschmack zu
+					entfalten. Es lohnt sich, bei der Brühe nicht hektisch zu werden und
+					ihr die nötige Garzeit zuzugestehen. Das Rezept ist eine Art
+					Grundrezept. Die Brühe kann noch weiter verfeinert werden (z.B. mit
+					Algen oder Dashi) oder es können neben dem Huhn auch noch
+					Schweineknochen mitgekocht werden. Als Einlage für die Suppe eignet
+					sich auch eine ganze Menge, einfach mal experimentieren oder im Netz
+					nachschauen was andere machen. Die Suppe ist sehr stärkend und macht
+					auch erstaunlich satt.
+				</p>
+				<h3>Rezept erstellt von</h3>
+				<div class="display-flex align-items-center mobilProfile">
+					<img class="profilImage" src="./img/profil/Sascha.png" />
+					<div class="profilName">Sascha Tichy</div>
+				</div>
+			</div>
+		</div>
+		<div w3-include-html="./templates/footer.html"></div>
+		<script type="text/javascript">
+			function downloadJSAtOnload() {
+				var element = document.createElement("script");
+				element.src = "navistyle.js";
+				document.body.appendChild(element);
+			}
+			// greater than or equal IE 9 and other modern Browser
+			if (window.addEventListener)
+				window.addEventListener("load", downloadJSAtOnload, false);
+			//  less than or equal IE 8
+			else if (window.attachEvent)
+				window.attachEvent("onload", downloadJSAtOnload);
+			// all Browser
+			else window.onload = downloadJSAtOnload;
+		</script>
+		<script src="./Scripts/scriptRamen.js"></script>
+		<script src="./Scripts/table+calculator.js"></script>
+	</body>
+</html>

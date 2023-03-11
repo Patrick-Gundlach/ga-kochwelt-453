@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="script.js"></script>
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="includeHTML()">
+    
+    <div w3-include-html="templates/header.html"></div>
+    <div class="contentBodyMain">
+        <p>ich bin test Content</p>
+    
+    </div>
+    <div w3-include-html="templates/footer.html"></div>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "navistyle.js";
+            document.body.appendChild(element);
+        }
+        // greater than or equal IE 9 and other modern Browser
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        //  less than or equal IE 8
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        // all Browser
+        else window.onload = downloadJSAtOnload; 
+    </script>
+</body>
+</html>

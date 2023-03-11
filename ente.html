@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="script.js"></script>
+    <title>Rezept Ente</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="includeHTML()">
+
+    <div w3-include-html="./templates/header.html"></div>
+    <div class="contentBodyMain">
+        <div class="contentBodyInner">
+            <h1>Rezept Ente</h1>
+            <img class="headerImage" src="./img/img-gerichte/Ente/ente_1.jpg" />
+            <div class="display-flex">
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>20 Min.</div>
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/brain-solid.svg" />
+                    </svg>pfiffig</div>
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/calendar-alt-regular.svg" />
+                    </svg>11.03.2003</div>
+            </div>
+            <hr />
+            <div class="ingredientInput">
+                <p>Zutaten für</p><div class="mobileLine">
+                    <input id="portionsAmount" 
+                    class="inputFieldPortion" 
+                    type="number" 
+                    value="4" 
+                    min="1" 
+                    max="99"
+                    onkeydown="return restrictInput(event)"
+                    onblur="replaceZeroWithOne()">
+                    <button onclick="calculatorIngredients()">Potionen</button>
+                </div>
+            </div>
+            <div id="ingredientList" class="ingredientLists"></div>
+            <h2>Zubereitung</h2>
+            <div class="display-flex">
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>Arbeitszeit ca.20 Minuten</div>
+                <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>Ruhezeit ca. 2 Stunden</div>
+                    <div class="clock"><svg>
+                        <image xlink:href="./img/icons/clock-regular.svg" />
+                    </svg>Gesamtzeit ca. 2 Stunden 20 Minuten</div>
+            </div>
+            <p>Ente mit Wasser gründlich abspülen und innen säubern. Knoblauch schälen, Koriander waschen, trocken tupfen und beides mit Salz und Pfeffer im Mörser zu einer Paste zerstoßen. In eine kleine Schüssel umfüllen, mit 1 EL Sojasauce und dem Honig verrühren. Ente mit dieser Paste innen und außen einreiben und etwa 2 Stunden zugedeckt an einem kühlen Ort marinieren lassen. Essig mit 2 EL Sojasauce und Zucker in einen kleinen Topf geben, kurz aufkochen und wieder abkühlen lassen. Peperoni waschen, entstielen und in feine Ringe schneiden, danach Hände gründlich waschen, nicht an die Augen oder Schleimhäute fassen. Peperoniringe zu der Essigsauce geben. Backofen auf 190 Grad (Gas Stufe 3) vorheizen. Ente in die Mitte auf einen Grillrost (mit Fettpfanne darunter)legen. Nach 10 Minuten die Temperatur auf 180 Grad verringern und die Ente weitere 80-90 Minuten braten. Dabei ab und zu wenden und mit dem ausgetretenen Fett übergießen. Ente tranchieren und mit der Essigsauce servieren.
+                Info: Diese gebratene Ente ist ein Grundrezept, das Sie für weitere Gerichte benötigen, die ich dann noch eingeben werde. Sie schmeckt aber auch mit Reis und ein paar Gurkenscheiben.</p>
+            <p>Viel Spaß und guten Appetit!</p>
+            <h3>Rezept erstellt von</h3>
+            <div class="display-flex  align-items-center mobilProfile">
+                <img class="profilImage" src="./img/profil/Patrick-gundlach.jpg">
+            <div class="profilName">Patrick Gundlach</div>
+            </div>
+            
+        </div>
+    </div>
+    <div w3-include-html="./templates/footer.html"></div>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "navistyle.js";
+            document.body.appendChild(element);
+        }
+        // greater than or equal IE 9 and other modern Browser
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        //  less than or equal IE 8
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        // all Browser
+        else window.onload = downloadJSAtOnload;
+    </script>
+    <script src="./Scripts/scriptEnte.js"></script>
+    <script src="./Scripts/table+calculator.js"></script>
+</body>
+
+</html>
